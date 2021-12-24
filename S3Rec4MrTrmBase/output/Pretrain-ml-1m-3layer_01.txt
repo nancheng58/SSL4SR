@@ -1,0 +1,310 @@
+Namespace(aap_weight=0.2, adam_beta1=0.9, adam_beta2=0.999, attention_probs_dropout_prob=0.5, batch_size=128, cuda_condition=True, data_dir='./data/', data_file='./data/ml-1m.txt', data_name='ml-1m', epochs=200, gpu_id='0', hidden_act='gelu', hidden_dropout_prob=0.5, hidden_size=64, initializer_range=0.02, item_size=3418, log_file='output/Pretrain-ml-1m-3layer_01.txt', log_freq=1, lr=0.001, map_weight=1.0, mask_id=3417, mask_p=0.2, max_seq_length=50, mip_weight=1.0, model_name='Pretrain', no_cuda=False, num_attention_heads=1, num_hidden_layers=3, output_dir='output/', pre_batch_size=100, pre_epochs=300, seed=42, sp_weight=0.1, weight_decay=0.0)
+Namespace(aap_weight=0.2, adam_beta1=0.9, adam_beta2=0.999, attention_probs_dropout_prob=0.2, batch_size=128, cuda_condition=True, data_dir='./data/', data_file='./data/ml-1m.txt', data_name='ml-1m', epochs=200, gpu_id='0', hidden_act='gelu', hidden_dropout_prob=0.2, hidden_size=64, initializer_range=0.02, item_size=3418, log_file='output/Pretrain-ml-1m-3layer_01.txt', log_freq=1, lr=0.001, map_weight=1.0, mask_id=3417, mask_p=0.2, max_seq_length=50, mip_weight=1.0, model_name='Pretrain', no_cuda=False, num_attention_heads=1, num_hidden_layers=3, output_dir='output/', pre_batch_size=100, pre_epochs=300, seed=42, sp_weight=0.1, weight_decay=0.0)
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 0, 'mip_loss_avg': '2.8155', 'sp_loss_avg': '0.6469'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 1, 'mip_loss_avg': '2.6758', 'sp_loss_avg': '0.6025'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 2, 'mip_loss_avg': '2.5960', 'sp_loss_avg': '0.5771'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 3, 'mip_loss_avg': '2.5223', 'sp_loss_avg': '0.5520'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 4, 'mip_loss_avg': '2.4610', 'sp_loss_avg': '0.5242'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 5, 'mip_loss_avg': '2.4185', 'sp_loss_avg': '0.5123'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 6, 'mip_loss_avg': '2.3943', 'sp_loss_avg': '0.5051'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 7, 'mip_loss_avg': '2.3691', 'sp_loss_avg': '0.4962'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 8, 'mip_loss_avg': '2.3529', 'sp_loss_avg': '0.4926'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 9, 'mip_loss_avg': '2.3377', 'sp_loss_avg': '0.4876'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 10, 'mip_loss_avg': '2.3245', 'sp_loss_avg': '0.4851'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 11, 'mip_loss_avg': '2.3176', 'sp_loss_avg': '0.4827'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 12, 'mip_loss_avg': '2.3092', 'sp_loss_avg': '0.4806'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 13, 'mip_loss_avg': '2.3051', 'sp_loss_avg': '0.4802'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 14, 'mip_loss_avg': '2.2990', 'sp_loss_avg': '0.4769'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 15, 'mip_loss_avg': '2.2917', 'sp_loss_avg': '0.4765'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 16, 'mip_loss_avg': '2.2893', 'sp_loss_avg': '0.4755'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 17, 'mip_loss_avg': '2.2829', 'sp_loss_avg': '0.4734'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 18, 'mip_loss_avg': '2.2773', 'sp_loss_avg': '0.4705'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 19, 'mip_loss_avg': '2.2764', 'sp_loss_avg': '0.4708'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 20, 'mip_loss_avg': '2.2654', 'sp_loss_avg': '0.4684'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 21, 'mip_loss_avg': '2.2652', 'sp_loss_avg': '0.4678'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 22, 'mip_loss_avg': '2.2622', 'sp_loss_avg': '0.4670'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 23, 'mip_loss_avg': '2.2603', 'sp_loss_avg': '0.4665'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 24, 'mip_loss_avg': '2.2556', 'sp_loss_avg': '0.4670'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 25, 'mip_loss_avg': '2.2533', 'sp_loss_avg': '0.4645'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 26, 'mip_loss_avg': '2.2493', 'sp_loss_avg': '0.4646'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 27, 'mip_loss_avg': '2.2473', 'sp_loss_avg': '0.4645'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 28, 'mip_loss_avg': '2.2423', 'sp_loss_avg': '0.4633'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 29, 'mip_loss_avg': '2.2418', 'sp_loss_avg': '0.4617'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 30, 'mip_loss_avg': '2.2369', 'sp_loss_avg': '0.4624'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 31, 'mip_loss_avg': '2.2362', 'sp_loss_avg': '0.4613'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 32, 'mip_loss_avg': '2.2333', 'sp_loss_avg': '0.4609'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 33, 'mip_loss_avg': '2.2322', 'sp_loss_avg': '0.4601'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 34, 'mip_loss_avg': '2.2266', 'sp_loss_avg': '0.4598'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 35, 'mip_loss_avg': '2.2242', 'sp_loss_avg': '0.4585'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 36, 'mip_loss_avg': '2.2241', 'sp_loss_avg': '0.4595'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 37, 'mip_loss_avg': '2.2236', 'sp_loss_avg': '0.4579'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 38, 'mip_loss_avg': '2.2214', 'sp_loss_avg': '0.4571'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 39, 'mip_loss_avg': '2.2177', 'sp_loss_avg': '0.4560'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 40, 'mip_loss_avg': '2.2158', 'sp_loss_avg': '0.4555'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 41, 'mip_loss_avg': '2.2153', 'sp_loss_avg': '0.4553'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 42, 'mip_loss_avg': '2.2092', 'sp_loss_avg': '0.4543'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 43, 'mip_loss_avg': '2.2093', 'sp_loss_avg': '0.4535'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 44, 'mip_loss_avg': '2.2104', 'sp_loss_avg': '0.4535'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 45, 'mip_loss_avg': '2.2045', 'sp_loss_avg': '0.4533'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 46, 'mip_loss_avg': '2.2023', 'sp_loss_avg': '0.4533'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 47, 'mip_loss_avg': '2.2020', 'sp_loss_avg': '0.4523'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 48, 'mip_loss_avg': '2.2023', 'sp_loss_avg': '0.4519'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 49, 'mip_loss_avg': '2.2003', 'sp_loss_avg': '0.4511'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 50, 'mip_loss_avg': '2.1978', 'sp_loss_avg': '0.4511'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 51, 'mip_loss_avg': '2.1970', 'sp_loss_avg': '0.4498'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 52, 'mip_loss_avg': '2.1929', 'sp_loss_avg': '0.4504'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 53, 'mip_loss_avg': '2.1932', 'sp_loss_avg': '0.4508'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 54, 'mip_loss_avg': '2.1923', 'sp_loss_avg': '0.4501'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 55, 'mip_loss_avg': '2.1878', 'sp_loss_avg': '0.4489'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 56, 'mip_loss_avg': '2.1906', 'sp_loss_avg': '0.4487'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 57, 'mip_loss_avg': '2.1892', 'sp_loss_avg': '0.4492'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 58, 'mip_loss_avg': '2.1864', 'sp_loss_avg': '0.4485'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 59, 'mip_loss_avg': '2.1817', 'sp_loss_avg': '0.4480'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 60, 'mip_loss_avg': '2.1839', 'sp_loss_avg': '0.4474'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 61, 'mip_loss_avg': '2.1832', 'sp_loss_avg': '0.4467'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 62, 'mip_loss_avg': '2.1847', 'sp_loss_avg': '0.4469'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 63, 'mip_loss_avg': '2.1788', 'sp_loss_avg': '0.4472'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 64, 'mip_loss_avg': '2.1806', 'sp_loss_avg': '0.4467'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 65, 'mip_loss_avg': '2.1779', 'sp_loss_avg': '0.4464'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 66, 'mip_loss_avg': '2.1783', 'sp_loss_avg': '0.4463'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 67, 'mip_loss_avg': '2.1753', 'sp_loss_avg': '0.4462'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 68, 'mip_loss_avg': '2.1761', 'sp_loss_avg': '0.4446'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 69, 'mip_loss_avg': '2.1763', 'sp_loss_avg': '0.4453'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 70, 'mip_loss_avg': '2.1758', 'sp_loss_avg': '0.4450'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 71, 'mip_loss_avg': '2.1753', 'sp_loss_avg': '0.4450'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 72, 'mip_loss_avg': '2.1725', 'sp_loss_avg': '0.4452'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 73, 'mip_loss_avg': '2.1709', 'sp_loss_avg': '0.4440'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 74, 'mip_loss_avg': '2.1717', 'sp_loss_avg': '0.4451'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 75, 'mip_loss_avg': '2.1673', 'sp_loss_avg': '0.4441'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 76, 'mip_loss_avg': '2.1687', 'sp_loss_avg': '0.4426'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 77, 'mip_loss_avg': '2.1699', 'sp_loss_avg': '0.4437'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 78, 'mip_loss_avg': '2.1665', 'sp_loss_avg': '0.4434'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 79, 'mip_loss_avg': '2.1680', 'sp_loss_avg': '0.4436'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 80, 'mip_loss_avg': '2.1653', 'sp_loss_avg': '0.4422'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 81, 'mip_loss_avg': '2.1647', 'sp_loss_avg': '0.4423'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 82, 'mip_loss_avg': '2.1642', 'sp_loss_avg': '0.4433'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 83, 'mip_loss_avg': '2.1660', 'sp_loss_avg': '0.4421'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 84, 'mip_loss_avg': '2.1642', 'sp_loss_avg': '0.4416'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 85, 'mip_loss_avg': '2.1623', 'sp_loss_avg': '0.4424'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 86, 'mip_loss_avg': '2.1623', 'sp_loss_avg': '0.4428'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 87, 'mip_loss_avg': '2.1591', 'sp_loss_avg': '0.4419'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 88, 'mip_loss_avg': '2.1591', 'sp_loss_avg': '0.4409'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 89, 'mip_loss_avg': '2.1593', 'sp_loss_avg': '0.4409'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 90, 'mip_loss_avg': '2.1592', 'sp_loss_avg': '0.4412'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 91, 'mip_loss_avg': '2.1596', 'sp_loss_avg': '0.4403'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 92, 'mip_loss_avg': '2.1587', 'sp_loss_avg': '0.4414'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 93, 'mip_loss_avg': '2.1585', 'sp_loss_avg': '0.4408'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 94, 'mip_loss_avg': '2.1570', 'sp_loss_avg': '0.4399'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 95, 'mip_loss_avg': '2.1540', 'sp_loss_avg': '0.4405'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 96, 'mip_loss_avg': '2.1554', 'sp_loss_avg': '0.4407'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 97, 'mip_loss_avg': '2.1558', 'sp_loss_avg': '0.4405'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 98, 'mip_loss_avg': '2.1513', 'sp_loss_avg': '0.4397'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 99, 'mip_loss_avg': '2.1550', 'sp_loss_avg': '0.4402'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 100, 'mip_loss_avg': '2.1542', 'sp_loss_avg': '0.4402'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 101, 'mip_loss_avg': '2.1538', 'sp_loss_avg': '0.4399'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 102, 'mip_loss_avg': '2.1534', 'sp_loss_avg': '0.4395'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 103, 'mip_loss_avg': '2.1501', 'sp_loss_avg': '0.4392'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 104, 'mip_loss_avg': '2.1493', 'sp_loss_avg': '0.4385'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 105, 'mip_loss_avg': '2.1497', 'sp_loss_avg': '0.4384'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 106, 'mip_loss_avg': '2.1522', 'sp_loss_avg': '0.4391'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 107, 'mip_loss_avg': '2.1494', 'sp_loss_avg': '0.4381'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 108, 'mip_loss_avg': '2.1507', 'sp_loss_avg': '0.4384'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 109, 'mip_loss_avg': '2.1494', 'sp_loss_avg': '0.4387'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 110, 'mip_loss_avg': '2.1465', 'sp_loss_avg': '0.4382'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 111, 'mip_loss_avg': '2.1477', 'sp_loss_avg': '0.4385'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 112, 'mip_loss_avg': '2.1474', 'sp_loss_avg': '0.4375'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 113, 'mip_loss_avg': '2.1440', 'sp_loss_avg': '0.4380'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 114, 'mip_loss_avg': '2.1443', 'sp_loss_avg': '0.4374'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 115, 'mip_loss_avg': '2.1435', 'sp_loss_avg': '0.4369'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 116, 'mip_loss_avg': '2.1449', 'sp_loss_avg': '0.4373'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 117, 'mip_loss_avg': '2.1472', 'sp_loss_avg': '0.4373'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 118, 'mip_loss_avg': '2.1450', 'sp_loss_avg': '0.4367'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 119, 'mip_loss_avg': '2.1421', 'sp_loss_avg': '0.4369'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 120, 'mip_loss_avg': '2.1443', 'sp_loss_avg': '0.4371'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 121, 'mip_loss_avg': '2.1422', 'sp_loss_avg': '0.4367'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 122, 'mip_loss_avg': '2.1413', 'sp_loss_avg': '0.4374'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 123, 'mip_loss_avg': '2.1436', 'sp_loss_avg': '0.4366'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 124, 'mip_loss_avg': '2.1401', 'sp_loss_avg': '0.4363'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 125, 'mip_loss_avg': '2.1421', 'sp_loss_avg': '0.4365'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 126, 'mip_loss_avg': '2.1384', 'sp_loss_avg': '0.4369'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 127, 'mip_loss_avg': '2.1421', 'sp_loss_avg': '0.4367'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 128, 'mip_loss_avg': '2.1417', 'sp_loss_avg': '0.4358'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 129, 'mip_loss_avg': '2.1396', 'sp_loss_avg': '0.4364'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 130, 'mip_loss_avg': '2.1375', 'sp_loss_avg': '0.4361'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 131, 'mip_loss_avg': '2.1398', 'sp_loss_avg': '0.4360'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 132, 'mip_loss_avg': '2.1412', 'sp_loss_avg': '0.4364'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 133, 'mip_loss_avg': '2.1362', 'sp_loss_avg': '0.4356'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 134, 'mip_loss_avg': '2.1376', 'sp_loss_avg': '0.4362'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 135, 'mip_loss_avg': '2.1381', 'sp_loss_avg': '0.4356'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 136, 'mip_loss_avg': '2.1386', 'sp_loss_avg': '0.4357'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 137, 'mip_loss_avg': '2.1335', 'sp_loss_avg': '0.4359'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 138, 'mip_loss_avg': '2.1367', 'sp_loss_avg': '0.4346'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 139, 'mip_loss_avg': '2.1354', 'sp_loss_avg': '0.4358'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 140, 'mip_loss_avg': '2.1341', 'sp_loss_avg': '0.4351'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 141, 'mip_loss_avg': '2.1359', 'sp_loss_avg': '0.4355'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 142, 'mip_loss_avg': '2.1355', 'sp_loss_avg': '0.4350'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 143, 'mip_loss_avg': '2.1345', 'sp_loss_avg': '0.4353'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 144, 'mip_loss_avg': '2.1345', 'sp_loss_avg': '0.4349'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 145, 'mip_loss_avg': '2.1336', 'sp_loss_avg': '0.4354'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 146, 'mip_loss_avg': '2.1324', 'sp_loss_avg': '0.4355'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 147, 'mip_loss_avg': '2.1320', 'sp_loss_avg': '0.4355'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 148, 'mip_loss_avg': '2.1364', 'sp_loss_avg': '0.4346'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 149, 'mip_loss_avg': '2.1333', 'sp_loss_avg': '0.4354'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 150, 'mip_loss_avg': '2.1299', 'sp_loss_avg': '0.4349'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 151, 'mip_loss_avg': '2.1313', 'sp_loss_avg': '0.4355'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 152, 'mip_loss_avg': '2.1305', 'sp_loss_avg': '0.4343'}
+AAP-0.2-MIP-1.0-MAP-1.0-SP-0.1
+{'epoch': 153, 'mip_loss_avg': '2.1324', 'sp_loss_avg': '0.4353'}

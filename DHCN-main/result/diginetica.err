@@ -1,0 +1,8 @@
+/data/yangjiyuan-slurm/DHCN-main/util.py:40: RuntimeWarning: divide by zero encountered in true_divide
+  DH = H.T.multiply(1.0/H.sum(axis=1).reshape(1, -1))
+/data/yangjiyuan-slurm/anaconda3/envs/tf1/lib/python3.6/site-packages/torch/cuda/__init__.py:125: UserWarning: 
+GeForce RTX 2080 Ti with CUDA capability sm_75 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_61 sm_70 compute_37.
+If you want to use the GeForce RTX 2080 Ti GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))

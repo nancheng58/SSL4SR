@@ -1,0 +1,7 @@
+Namespace(batch=8192, dataset='CiaoDVD', decay=0.97, epochs=400, gcn_act='prelu', hide_dim=16, informax=1, informax_graph_act='sigmoid', item_graph_indx='iui_iti', k_hop_num=2, lambda1=0.06, lambda2=0.002, layer_dim='[16]', lr=0.05, minlr=0.0001, patience=5, reg=0.05, seed=29, topk=10, user_graph_indx='uu_uiu_uitiu')
+user metaPath: uu_uiu_uitiu
+item metaPath: iui_iti
+ModelName = SR-HAN_CiaoDVD_1637814344_hide_dim_16_layer_dim_[16]_lr_0.05_reg_0.05_topK_10_graph_uu_uiu_uitiu_iui_iti_useInformax_1_2hopSubGraph_lambda1_0.06_lambda2_0.002
+GCN Act funcction:prelu
+informax graph-level Act funciton: sigmoid
+2021-11-25 12:26:16.066622: **************************************************************
