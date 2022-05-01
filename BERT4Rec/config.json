@@ -1,0 +1,63 @@
+{
+  "model_code": "bert",
+  "mode": "test",
+  "model_init_seed": 0,
+
+  "load_processed_dataset" : false,
+  "processed_dataset_path": null,
+
+  "test_model_path" : "/data/yangjiyuan-slurm/bert4rec&sas4rec/experiments/train_bert_2022-04-15_1/models/best_acc_model.pth",
+
+  "worker_number" : 5,
+
+  "train_batch_size" : 64,
+  "val_batch_size" : 64,
+  "test_batch_size" : 64,
+
+  "prop_sliding_window" : 0.3,
+
+  "test_negative_sampler_code" : "random",
+  "test_negative_sample_size" : 99,
+  "test_negative_sampling_seed" : 98765,
+
+  "train_negative_sampler_code" : "random",
+  "train_negative_sample_size" : 99,
+  "train_negative_sampling_seed" : 98765,
+
+  "device" :"cuda",
+  "num_gpu" : 1,
+  "device_idx" : "0",
+
+  "optimizer" : "Adam",
+  "lr" : 0.001,
+  "weight_decay" : 0,
+  "momentum" : null,
+  "decay_step": 50,
+  "gamma": 0.95,
+  "num_epochs": 200,
+
+  "metric_ks" : [5,10,20],
+  "best_metric": "NDCG@20",
+
+  "bert_max_len" : 50,
+  "bert_hidden_units": 64,
+  "bert_num_blocks": 2,
+  "bert_num_heads": 2,
+  "bert_dropout": 0.2,
+  "bert_mask_prob": 0.3,
+  "bert_hidden_dropout": 0.2,
+
+  "sas_max_len": 50,
+  "sas_hidden_units": 64,
+  "sas_num_blocks": 2,
+  "sas_heads": 1,
+  "sas_dropout": 0.2,
+  "l2_emb": 0.0,
+
+  "experiment_dir": "experiments",
+  "experiment_description": "test",
+  "data_name": "Beauty",
+  "resume_path": null,
+
+  "show_process_bar" : false
+}

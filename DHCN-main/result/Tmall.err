@@ -1,6 +1,0 @@
-/data/yangjiyuan-slurm/anaconda3/lib/python3.8/site-packages/numpy/core/_asarray.py:102: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
-  return array(a, dtype, copy=False, order=order)
-/data/yangjiyuan-slurm/DHCN-main/util.py:40: RuntimeWarning: divide by zero encountered in true_divide
-  DH = H.T.multiply(1.0/H.sum(axis=1).reshape(1, -1))
-/data/yangjiyuan-slurm/DHCN-main/model.py:38: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  /opt/conda/conda-bld/pytorch_1634272172048/work/torch/csrc/utils/tensor_new.cpp:201.)
-  final1 = trans_to_cuda(torch.tensor([item.cpu().detach().numpy() for item in final]))

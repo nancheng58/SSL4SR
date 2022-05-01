@@ -1,0 +1,262 @@
+22 Mar 21:59    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 2020
+state = INFO
+reproducibility = True
+data_path = dataset/yelp
+checkpoint_dir = saved
+show_progress = False
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+
+Training Hyper Parameters:
+epochs = 80
+train_batch_size = 256
+learner = adam
+learning_rate = 0.001
+neg_sampling = None
+eval_step = 1
+stopping_step = 10
+clip_grad_norm = None
+weight_decay = 0
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_args = {'split': {'LS': 'valid_and_test'}, 'group_by': 'user', 'order': 'TO', 'mode': 'uni100'}
+repeatable = True
+metrics = ['Recall', 'MRR', 'NDCG']
+topk = [5, 10, 20]
+valid_metric = NDCG@10
+valid_metric_bigger = True
+eval_batch_size = 32
+metric_decimal_place = 4
+
+Dataset Hyper Parameters:
+field_separator = ,
+seq_separator =  
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = rating
+TIME_FIELD = timestamp
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = {'inter': ['user_id', 'item_id', 'timestamp']}
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+rm_dup_inter = None
+val_interval = None
+filter_inter_by_user_or_item = True
+user_inter_num_interval = [0,inf)
+item_inter_num_interval = [0,inf)
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+benchmark_filename = None
+
+Other Hyper Parameters: 
+wandb_project = recbole
+require_pow = False
+n_layers = 2
+n_heads = 2
+hidden_size = 64
+inner_size = 64
+hidden_dropout_prob = 0.25
+attn_dropout_prob = 0.25
+hidden_act = gelu
+layer_norm_eps = 1e-12
+initializer_range = 0.02
+loss_type = CE
+lmd = 0.25
+MODEL_TYPE = ModelType.SEQUENTIAL
+log_root = ./pop_log/
+lmd_sem = 0.25
+tau = 1
+contrast = us_x
+sim = dot
+MODEL_INPUT_TYPE = InputType.POINTWISE
+eval_type = EvaluatorType.RANKING
+device = cuda
+train_neg_sample_args = {'strategy': 'none'}
+eval_neg_sample_args = {'strategy': 'by', 'by': 100, 'distribution': 'uniform'}
+
+
+22 Mar 21:59    INFO  yelp
+The number of users: 22846
+Average actions of users: 10.374436419347779
+The number of items: 16553
+Average actions of items: 14.318753020782987
+The number of inters: 237004
+The sparsity of the dataset: 99.93732868775218%
+Remain Fields: ['user_id', 'item_id', 'timestamp']
+22 Mar 21:59    INFO  [Training]: train_batch_size = [256] negative sampling: [None]
+22 Mar 21:59    INFO  [Evaluation]: eval_batch_size = [32] eval_args: [{'split': {'LS': 'valid_and_test'}, 'group_by': 'user', 'order': 'TO', 'mode': 'uni100'}]
+22 Mar 21:59    INFO  CL4SRec(
+  (item_embedding): Embedding(16554, 64, padding_idx=0)
+  (position_embedding): Embedding(50, 64)
+  (trm_encoder): TransformerEncoder(
+    (layer): ModuleList(
+      (0): TransformerLayer(
+        (multi_head_attention): MultiHeadAttention(
+          (query): Linear(in_features=64, out_features=64, bias=True)
+          (key): Linear(in_features=64, out_features=64, bias=True)
+          (value): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax(dim=-1)
+          (attn_dropout): Dropout(p=0.25, inplace=False)
+          (dense): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (out_dropout): Dropout(p=0.25, inplace=False)
+        )
+        (feed_forward): FeedForward(
+          (dense_1): Linear(in_features=64, out_features=64, bias=True)
+          (dense_2): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.25, inplace=False)
+        )
+      )
+      (1): TransformerLayer(
+        (multi_head_attention): MultiHeadAttention(
+          (query): Linear(in_features=64, out_features=64, bias=True)
+          (key): Linear(in_features=64, out_features=64, bias=True)
+          (value): Linear(in_features=64, out_features=64, bias=True)
+          (softmax): Softmax(dim=-1)
+          (attn_dropout): Dropout(p=0.25, inplace=False)
+          (dense): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (out_dropout): Dropout(p=0.25, inplace=False)
+        )
+        (feed_forward): FeedForward(
+          (dense_1): Linear(in_features=64, out_features=64, bias=True)
+          (dense_2): Linear(in_features=64, out_features=64, bias=True)
+          (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.25, inplace=False)
+        )
+      )
+    )
+  )
+  (LayerNorm): LayerNorm((64,), eps=1e-12, elementwise_affine=True)
+  (dropout): Dropout(p=0.25, inplace=False)
+  (loss_fct): CrossEntropyLoss()
+  (nce_fct): CrossEntropyLoss()
+)
+Trainable parameters: 1113216
+22 Mar 22:01    INFO  epoch 0 training [time: 150.53s, train loss: 6909.6322]
+22 Mar 22:07    INFO  epoch 0 evaluating [time: 308.85s, valid_score: 0.264600]
+22 Mar 22:07    INFO  valid result: 
+recall@5 : 0.3217    recall@10 : 0.448    recall@20 : 0.5933    mrr@5 : 0.1916    mrr@10 : 0.2084    mrr@20 : 0.2184    ndcg@5 : 0.2238    ndcg@10 : 0.2646    ndcg@20 : 0.3012
+22 Mar 22:07    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 22:09    INFO  epoch 1 training [time: 149.24s, train loss: 5981.2993]
+22 Mar 22:14    INFO  epoch 1 evaluating [time: 310.61s, valid_score: 0.445200]
+22 Mar 22:14    INFO  valid result: 
+recall@5 : 0.5487    recall@10 : 0.7142    recall@20 : 0.858    mrr@5 : 0.3397    mrr@10 : 0.3619    mrr@20 : 0.372    ndcg@5 : 0.3915    ndcg@10 : 0.4452    ndcg@20 : 0.4817
+22 Mar 22:14    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 22:17    INFO  epoch 2 training [time: 149.63s, train loss: 5432.9402]
+22 Mar 22:22    INFO  epoch 2 evaluating [time: 310.72s, valid_score: 0.491600]
+22 Mar 22:22    INFO  valid result: 
+recall@5 : 0.6032    recall@10 : 0.7853    recall@20 : 0.9246    mrr@5 : 0.3764    mrr@10 : 0.4007    mrr@20 : 0.4107    ndcg@5 : 0.4326    ndcg@10 : 0.4916    ndcg@20 : 0.5272
+22 Mar 22:22    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 22:24    INFO  epoch 3 training [time: 149.77s, train loss: 5153.1858]
+22 Mar 22:30    INFO  epoch 3 evaluating [time: 309.07s, valid_score: 0.508600]
+22 Mar 22:30    INFO  valid result: 
+recall@5 : 0.6253    recall@10 : 0.8064    recall@20 : 0.9407    mrr@5 : 0.3917    mrr@10 : 0.4162    mrr@20 : 0.4259    ndcg@5 : 0.4497    ndcg@10 : 0.5086    ndcg@20 : 0.543
+22 Mar 22:30    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 22:32    INFO  epoch 4 training [time: 149.78s, train loss: 4973.3717]
+22 Mar 22:37    INFO  epoch 4 evaluating [time: 309.33s, valid_score: 0.523300]
+22 Mar 22:37    INFO  valid result: 
+recall@5 : 0.6381    recall@10 : 0.8173    recall@20 : 0.9422    mrr@5 : 0.4081    mrr@10 : 0.4322    mrr@20 : 0.4413    ndcg@5 : 0.4652    ndcg@10 : 0.5233    ndcg@20 : 0.5554
+22 Mar 22:37    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 22:40    INFO  epoch 5 training [time: 149.54s, train loss: 4841.2142]
+22 Mar 22:45    INFO  epoch 5 evaluating [time: 309.24s, valid_score: 0.525700]
+22 Mar 22:45    INFO  valid result: 
+recall@5 : 0.6419    recall@10 : 0.8199    recall@20 : 0.9429    mrr@5 : 0.4106    mrr@10 : 0.4344    mrr@20 : 0.4434    ndcg@5 : 0.4681    ndcg@10 : 0.5257    ndcg@20 : 0.5573
+22 Mar 22:45    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 22:47    INFO  epoch 6 training [time: 149.86s, train loss: 4736.9118]
+22 Mar 22:53    INFO  epoch 6 evaluating [time: 308.76s, valid_score: 0.528300]
+22 Mar 22:53    INFO  valid result: 
+recall@5 : 0.6436    recall@10 : 0.8225    recall@20 : 0.9423    mrr@5 : 0.4131    mrr@10 : 0.4371    mrr@20 : 0.4458    ndcg@5 : 0.4703    ndcg@10 : 0.5283    ndcg@20 : 0.5591
+22 Mar 22:53    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 22:55    INFO  epoch 7 training [time: 148.94s, train loss: 4644.7768]
+22 Mar 23:00    INFO  epoch 7 evaluating [time: 309.08s, valid_score: 0.528500]
+22 Mar 23:00    INFO  valid result: 
+recall@5 : 0.6463    recall@10 : 0.8217    recall@20 : 0.9396    mrr@5 : 0.4139    mrr@10 : 0.4375    mrr@20 : 0.446    ndcg@5 : 0.4716    ndcg@10 : 0.5285    ndcg@20 : 0.5587
+22 Mar 23:00    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 23:03    INFO  epoch 8 training [time: 148.55s, train loss: 4569.4754]
+22 Mar 23:08    INFO  epoch 8 evaluating [time: 309.87s, valid_score: 0.528000]
+22 Mar 23:08    INFO  valid result: 
+recall@5 : 0.6485    recall@10 : 0.8186    recall@20 : 0.9357    mrr@5 : 0.4148    mrr@10 : 0.4377    mrr@20 : 0.4462    ndcg@5 : 0.4728    ndcg@10 : 0.528    ndcg@20 : 0.5581
+22 Mar 23:10    INFO  epoch 9 training [time: 148.72s, train loss: 4505.2839]
+22 Mar 23:15    INFO  epoch 9 evaluating [time: 308.38s, valid_score: 0.528100]
+22 Mar 23:15    INFO  valid result: 
+recall@5 : 0.645    recall@10 : 0.8182    recall@20 : 0.9365    mrr@5 : 0.4147    mrr@10 : 0.438    mrr@20 : 0.4466    ndcg@5 : 0.4718    ndcg@10 : 0.5281    ndcg@20 : 0.5584
+22 Mar 23:18    INFO  epoch 10 training [time: 147.69s, train loss: 4446.5584]
+22 Mar 23:23    INFO  epoch 10 evaluating [time: 308.38s, valid_score: 0.529700]
+22 Mar 23:23    INFO  valid result: 
+recall@5 : 0.6469    recall@10 : 0.8165    recall@20 : 0.9336    mrr@5 : 0.4178    mrr@10 : 0.4406    mrr@20 : 0.4491    ndcg@5 : 0.4746    ndcg@10 : 0.5297    ndcg@20 : 0.5597
+22 Mar 23:23    INFO  Saving current: saved/CL4SRec-Mar-22-2022_21-59-23.pth
+22 Mar 23:26    INFO  epoch 11 training [time: 147.99s, train loss: 4395.2189]
+22 Mar 23:31    INFO  epoch 11 evaluating [time: 309.12s, valid_score: 0.528000]
+22 Mar 23:31    INFO  valid result: 
+recall@5 : 0.6437    recall@10 : 0.818    recall@20 : 0.9315    mrr@5 : 0.4145    mrr@10 : 0.438    mrr@20 : 0.4462    ndcg@5 : 0.4713    ndcg@10 : 0.528    ndcg@20 : 0.5571
+22 Mar 23:33    INFO  epoch 12 training [time: 147.84s, train loss: 4349.7201]
+22 Mar 23:38    INFO  epoch 12 evaluating [time: 308.88s, valid_score: 0.526100]
+22 Mar 23:38    INFO  valid result: 
+recall@5 : 0.6426    recall@10 : 0.8143    recall@20 : 0.9293    mrr@5 : 0.4135    mrr@10 : 0.4367    mrr@20 : 0.445    ndcg@5 : 0.4704    ndcg@10 : 0.5261    ndcg@20 : 0.5557
+22 Mar 23:41    INFO  epoch 13 training [time: 148.07s, train loss: 4310.9181]
+22 Mar 23:46    INFO  epoch 13 evaluating [time: 307.34s, valid_score: 0.524400]
+22 Mar 23:46    INFO  valid result: 
+recall@5 : 0.6414    recall@10 : 0.8131    recall@20 : 0.926    mrr@5 : 0.4117    mrr@10 : 0.4347    mrr@20 : 0.4429    ndcg@5 : 0.4687    ndcg@10 : 0.5244    ndcg@20 : 0.5533
+22 Mar 23:48    INFO  epoch 14 training [time: 148.08s, train loss: 4271.0079]
+22 Mar 23:53    INFO  epoch 14 evaluating [time: 306.93s, valid_score: 0.524500]
+22 Mar 23:53    INFO  valid result: 
+recall@5 : 0.6406    recall@10 : 0.8116    recall@20 : 0.9248    mrr@5 : 0.4122    mrr@10 : 0.4354    mrr@20 : 0.4436    ndcg@5 : 0.4689    ndcg@10 : 0.5245    ndcg@20 : 0.5535
+22 Mar 23:56    INFO  epoch 15 training [time: 148.23s, train loss: 4238.6123]
+23 Mar 00:01    INFO  epoch 15 evaluating [time: 306.49s, valid_score: 0.524100]
+23 Mar 00:01    INFO  valid result: 
+recall@5 : 0.6411    recall@10 : 0.8102    recall@20 : 0.9244    mrr@5 : 0.4124    mrr@10 : 0.4352    mrr@20 : 0.4434    ndcg@5 : 0.4691    ndcg@10 : 0.5241    ndcg@20 : 0.5533
+23 Mar 00:04    INFO  epoch 16 training [time: 148.04s, train loss: 4204.6568]
+23 Mar 00:09    INFO  epoch 16 evaluating [time: 306.24s, valid_score: 0.521000]
+23 Mar 00:09    INFO  valid result: 
+recall@5 : 0.6376    recall@10 : 0.8074    recall@20 : 0.9229    mrr@5 : 0.4093    mrr@10 : 0.4321    mrr@20 : 0.4404    ndcg@5 : 0.4659    ndcg@10 : 0.521    ndcg@20 : 0.5506
+23 Mar 00:11    INFO  epoch 17 training [time: 147.79s, train loss: 4173.4697]
+23 Mar 00:16    INFO  epoch 17 evaluating [time: 306.65s, valid_score: 0.519500]
+23 Mar 00:16    INFO  valid result: 
+recall@5 : 0.6365    recall@10 : 0.8035    recall@20 : 0.9191    mrr@5 : 0.4089    mrr@10 : 0.4313    mrr@20 : 0.4396    ndcg@5 : 0.4654    ndcg@10 : 0.5195    ndcg@20 : 0.5491
+23 Mar 00:19    INFO  epoch 18 training [time: 147.88s, train loss: 4147.7035]
+23 Mar 00:24    INFO  epoch 18 evaluating [time: 306.82s, valid_score: 0.521000]
+23 Mar 00:24    INFO  valid result: 
+recall@5 : 0.6394    recall@10 : 0.8081    recall@20 : 0.9219    mrr@5 : 0.409    mrr@10 : 0.4318    mrr@20 : 0.44    ndcg@5 : 0.4662    ndcg@10 : 0.521    ndcg@20 : 0.5501
+23 Mar 00:26    INFO  epoch 19 training [time: 147.33s, train loss: 4120.7476]
+23 Mar 00:31    INFO  epoch 19 evaluating [time: 306.95s, valid_score: 0.522200]
+23 Mar 00:31    INFO  valid result: 
+recall@5 : 0.6381    recall@10 : 0.8068    recall@20 : 0.9194    mrr@5 : 0.4111    mrr@10 : 0.4337    mrr@20 : 0.4418    ndcg@5 : 0.4674    ndcg@10 : 0.5222    ndcg@20 : 0.551
+23 Mar 00:34    INFO  epoch 20 training [time: 147.18s, train loss: 4095.4329]
+23 Mar 00:39    INFO  epoch 20 evaluating [time: 306.65s, valid_score: 0.520100]
+23 Mar 00:39    INFO  valid result: 
+recall@5 : 0.6374    recall@10 : 0.8045    recall@20 : 0.9177    mrr@5 : 0.4091    mrr@10 : 0.4317    mrr@20 : 0.4398    ndcg@5 : 0.4658    ndcg@10 : 0.5201    ndcg@20 : 0.549
+23 Mar 00:41    INFO  epoch 21 training [time: 147.38s, train loss: 4071.6374]
+23 Mar 00:46    INFO  epoch 21 evaluating [time: 306.99s, valid_score: 0.521800]
+23 Mar 00:46    INFO  valid result: 
+recall@5 : 0.6367    recall@10 : 0.8048    recall@20 : 0.9175    mrr@5 : 0.4113    mrr@10 : 0.434    mrr@20 : 0.4421    ndcg@5 : 0.4672    ndcg@10 : 0.5218    ndcg@20 : 0.5507
+23 Mar 00:46    INFO  Finished training, best eval result in epoch 10
+23 Mar 00:46    INFO  Loading model structure and parameters from saved/CL4SRec-Mar-22-2022_21-59-23.pth
+23 Mar 00:52    INFO  best valid : OrderedDict([('recall@5', 0.6469), ('recall@10', 0.8165), ('recall@20', 0.9336), ('mrr@5', 0.4178), ('mrr@10', 0.4406), ('mrr@20', 0.4491), ('ndcg@5', 0.4746), ('ndcg@10', 0.5297), ('ndcg@20', 0.5597)])
+23 Mar 00:52    INFO  test result: OrderedDict([('recall@5', 0.6389), ('recall@10', 0.8098), ('recall@20', 0.9305), ('mrr@5', 0.407), ('mrr@10', 0.43), ('mrr@20', 0.4387), ('ndcg@5', 0.4646), ('ndcg@10', 0.52), ('ndcg@20', 0.551)])

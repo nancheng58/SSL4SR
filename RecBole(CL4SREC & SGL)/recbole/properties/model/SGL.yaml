@@ -1,0 +1,7 @@
+type: "ED"
+n_layers: 4
+ssl_tau: 0.45
+reg_weight: 3e-5
+ssl_weight: 0
+drop_ratio: 0.2
+embedding_size: 64
