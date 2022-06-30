@@ -68,7 +68,7 @@ def augment(seq_list):
     return u2seq
 class BertTrainDataset(data_utils.Dataset):
     def __init__(self, u2seq, max_len, mask_prob, mask_token, num_items, rng):
-        self.u2seq = augment(u2seq)
+        self.u2seq = u2seq  # augment(u2seq) augmentation or not
         self.users = range(len(self.u2seq))
         self.max_len = max_len
         self.mask_prob = mask_prob
