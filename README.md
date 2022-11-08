@@ -19,20 +19,7 @@ This is a repo of several Sequential Recommendation System baseline.
 
 For CL4Rec and SGL models, we reproduce them and run experiment with [RecBole](https://github.com/RUCAIBox/RecBole).
 
-The code is changed relative to the original code. For example, we have added the code to count the indicators of different length series in each model. In addition, for ASReP model and BERT4Rec model, we add ablation study.
-
-## AsReP ablation study
-
-| 消融实验    | 说明                                                         | 对应参数                                                    |
-| ----------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| findByEmbed | 先计算pretrain model的item embedding，再mean pool得到seq的embedding， | --aug_mode inspire(在run_pretrain.bash文件里更改)           |
-| pop         | 随机选择top50物品，再随机增广                                | 用到的函数在已写到util.py中，稍作修改即可用（需在源码更改） |
-| point       | 选择top-k物品一次性生成                                      | --aug_mode seq2point(在run_pretrain.bash文件里更改)         |
-| seq         | 按照自回归的方式生成                                         | --aug_mode seq2seq(在run_pretrain.bash文件里更改)           |
-| -pretrain   | 去掉pretrain过程                                             | --reversed_pretrain -1(在run_finetune.bash文件里更改)       |
-| -aud data   | 去掉增广数据，其实就是生成阈值M设为0                         | --M 0(在run_finetune.bash文件里更改)                        |
-
-
+The code is changed relative to the original code. For example, we have added the code to count the indicators of different length series in each model.
 
 ## Usage
 
