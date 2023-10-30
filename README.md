@@ -1,9 +1,7 @@
 # Sequential Recommendation System via Self-supervised Learning
 
-
 ## Overview
-
-This repo collects several codes and datasets of Self-supervised learning Sequential Recommendation System baselines.
+This repo is the code of our survey paper "基于自监督的预训练在推荐系统中的研究综述" accepted by CCIR 2023, which collects several codes and datasets of Self-supervised learning Sequential Recommendation System baselines.
 
 | **Model**     | Paper title and link                                         | Code link                                                    | **Topic**      | From      |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------- | --------- |
