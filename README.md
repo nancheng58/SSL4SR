@@ -5,18 +5,18 @@ This repo is the code of our survey paper "[基于自监督的预训练在推荐
 
 | **Model**     | Paper title and link                                         | Code link                                                    | **Topic**      | From      |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------- | --------- |
-| ASReP         | *[Augmenting Sequential Recommendation with Pseudo-Prior Items via Reversely Pre-training Transformer](https://arxiv.org/abs/2105.00522)* | https://github.com/DyGRec/ASReP                              | Sequential Rec | SIGIR2021 |
-| SASRec        | [Self-Attentive Sequential Recommendation](https://cseweb.ucsd.edu/~jmcauley/pdfs/icdm18.pdf) | https://github.com/kang205/SASRec                            | Sequential Rec | ICDM2018  |
-| DHCN          | *[Self-Supervised Hypergraph Convolutional Networks for Session-based Recommendation](https://arxiv.org/abs/2012.06852)* | https://github.com/xiaxin1998/DHCN                           | Session Rec    | AAAI2021  |
-| S3Rec         | *[S3Rec: Self-Supervised Learning for Sequential Recommendation with Mutual Information Maximization](https://arxiv.org/abs/2008.07873)* | https://github.com/RUCAIBox/CIKM2020-S3Rec                   | Sequential Rec | CIKM2020  |
-| MrTransformer | *[Improving Transformer-based Sequential Recommenders through Preference Editing](https://arxiv.org/abs/2106.12120)* | https://github.com/mamuyang/MrTransformer                    | Sequential Rec | TOIS2022     |
-| BERT4Rec      | *[BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer](https://arxiv.org/abs/1904.06690)* | https://github.com/FeiSun/BERT4Rec                           | Sequential Rec | CIKM2019  |
-| CL4SRec       | *[Contrastive Learning for Sequential Recommendation](https://arxiv.org/abs/2010.14395)* | our reproduction via [RecBole](https://github.com/RUCAIBox/RecBole) and [DuoRec](https://github.com/RuihongQiu/DuoRec)| Sequential Rec | ICDE2022     |
-| SGL           | *[Self-supervised Graph Learning for Recommendation](https://arxiv.org/abs/2010.10783)* | https://github.com/wujcan/SGL                                | Session Rec    | SIGIR2021 |
+| ASReP         | *[Augmenting Sequential Recommendation with Pseudo-Prior Items via Reversely Pre-training Transformer](https://arxiv.org/abs/2105.00522)* | https://github.com/DyGRec/ASReP                              | Sequential Recommendation | SIGIR2021 |
+| SASRec        | [Self-Attentive Sequential Recommendation](https://cseweb.ucsd.edu/~jmcauley/pdfs/icdm18.pdf) | https://github.com/kang205/SASRec                            | Sequential Recommendation | ICDM2018  |
+| DHCN          | *[Self-Supervised Hypergraph Convolutional Networks for Session-based Recommendation](https://arxiv.org/abs/2012.06852)* | https://github.com/xiaxin1998/DHCN                           | Session Recommendation    | AAAI2021  |
+| S3Rec         | *[S3Rec: Self-Supervised Learning for Sequential Recommendation with Mutual Information Maximization](https://arxiv.org/abs/2008.07873)* | https://github.com/RUCAIBox/CIKM2020-S3Rec                   | Sequential Recommendation | CIKM2020  |
+| MrTransformer | *[Improving Transformer-based Sequential Recommenders through Preference Editing](https://arxiv.org/abs/2106.12120)* | https://github.com/mamuyang/MrTransformer                    | Sequential Recommendation | TOIS2022     |
+| BERT4Rec      | *[BERT4Rec: Sequential Recommendation with Bidirectional Encoder Representations from Transformer](https://arxiv.org/abs/1904.06690)* | https://github.com/FeiSun/BERT4Rec                           | Sequential Recommendation | CIKM2019  |
+| CL4SRec       | *[Contrastive Learning for Sequential Recommendation](https://arxiv.org/abs/2010.14395)* | our reproduction via [RecBole](https://github.com/RUCAIBox/RecBole) and [DuoRec](https://github.com/RuihongQiu/DuoRec)| Sequential Recommendation | ICDE2022     |
+| SGL           | *[Self-supervised Graph Learning for Recommendation](https://arxiv.org/abs/2010.10783)* | https://github.com/wujcan/SGL                                | Session Recommendation    | SIGIR2021 |
 
 For CL4Rec and SGL models, we reproduce them and run experiment with [RecBole](https://github.com/RUCAIBox/RecBole).
 
-The code is changed relative to the original code. For example, we have added the code to count the indicators of different length series in each model.
+Compared with the original paper, the code is changed, e.g., we have added the code to count the indicators of different length.
 
 ## Datasets
 
@@ -48,17 +48,18 @@ The code is changed relative to the original code. For example, we have added th
 We refer to the method in [1,2,3] to process the datasets. If the user interacts with the item, we will convert the interaction with a clear score into implicit positive feedback. After that, we will group the interactive information according to users. We will sort the items for each user according to the timestamp of their interaction with the items. Because this work aims not to investigate the "cold start" issue in the recommendation system, we circularly filter out users with less than 5 interactions and items with less than 5 interactions. In addition, there are users with too much interactive data in the dataset used in this work, so we limit the maximum length of the user interaction sequences to 50. Because the yelp dataset is too large, we adopted a processing method similar to [3], and only the 2019 data of the dataset was intercepted. 
 
 
-ref: 
+Reference:
+
 [1] Wang-Cheng Kang and Julian McAuley. 2018. Self-attentive sequential recommendation. In ICDM. IEEE, 197–206.
 
 [2] Fei Sun, Jun Liu, Jian Wu, Changhua Pei, Xiao Lin, Wenwu Ou, and Peng Jiang. 2019. BERT4Rec: Sequential recommendation with bidirectional encoder representations from transformer. In CIKM. 1441–1450.
 
-[3] S3-Rec: Self-Supervised Learning for Sequential Recommendation with Mutual Information Maximization. In Proceedings of the 29th ACM International Conference on Information & Knowledge Management (CIKM '20)
+[3] S3-Rec: Self-Supervised Learning for Sequential Recommendation with Mutual Information Maximization. In Proceedings of the 29th ACM International Conference on Information & Knowledge Management (CIKM '20).
 ## Usage
 
 ### Environments
 
-In every baseline model folder,  if you can find the requirement.txt, you can use
+For each model, the requirement.txt is provided, you can use
 
 `pip install -r requirements.txt`  if you use pip.
 
@@ -66,19 +67,17 @@ In every baseline model folder,  if you can find the requirement.txt, you can us
 
 ### Slurm
 
-In every baseline folder, there is a slurm execute script.
+Besides, we provide the slurm execute script in each baseline folder.
 
-About slurm usage,you can reference this link: https://slurm.schedmd.com/documentation.html
+More details abbout slurm usage can be found on this link: https://slurm.schedmd.com/documentation.html
 
-*[Note: you ought to create result folder before execute script]*
-
-*[Note: you ought to modify  "conda activate envname" to your environment]*
+*[Note: please modify  "conda activate envname" to your environment]*
 
 ```bash
 #!/bin/bash
-#SBATCH -e result/sas_ans_FT.err
-#SBATCH -o result/sas_ans_FT.out
-#SBATCH -J sas4recFT
+#SBATCH -e sas_ans_FT.err
+#SBATCH -o sas_ans_FT.out
+#SBATCH -J sas4recFT # jobname
 
 #SBATCH --partition=debug 
 #SBATCH --nodelist=gpuxx
