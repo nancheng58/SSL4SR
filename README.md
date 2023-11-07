@@ -69,7 +69,7 @@ For each model, the requirement.txt is provided, you can use
 
 Besides, we provide the slurm execute script in each baseline folder.
 
-More details abbout slurm usage can be found on this link: https://slurm.schedmd.com/documentation.html
+More details about slurm usage can be found on this link: https://slurm.schedmd.com/documentation.html
 
 *[Note: please modify  "conda activate envname" to your environment]*
 
